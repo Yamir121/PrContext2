@@ -36,16 +36,17 @@ public class QRReader
 
     public IEnumerator Read()
     {
+        Debug.Log("Not yet");
         IBarcodeReader barcodeReader = new BarcodeReader();
         var result = barcodeReader.Decode(camTexture.GetPixels32(),camTexture.width, camTexture.height);
         if (result.Text != null)
         {
             Debug.Log("Not quite");
             text = result.Text;
-            yield return null;
+            yield return new WaitForSeconds(1);
         }
         Debug.Log("Madeit");
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
     }
 }
 
