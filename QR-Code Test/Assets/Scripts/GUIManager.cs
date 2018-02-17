@@ -15,6 +15,7 @@ public class GUIManager : MonoBehaviour
     private void OnGUI()
     {
         reader.Draw();
+
         GUI.Label(new Rect(0, 0, Screen.width, Screen.height), "DECODED TEXT FROM QR: " + reader.text);
     }
 }

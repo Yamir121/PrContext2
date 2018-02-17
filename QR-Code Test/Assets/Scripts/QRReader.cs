@@ -7,13 +7,12 @@ using ZXing.QrCode;
 
 public class QRReader
 {
-
     private WebCamTexture camTexture;
     private Rect screenRect;
     public string text = "";
 
     public QRReader()
-    {}
+    { }
 
     public void Create()
     {
@@ -36,18 +35,30 @@ public class QRReader
 
     public IEnumerator Read()
     {
-        Debug.Log("Not yet");
-        IBarcodeReader barcodeReader = new BarcodeReader();
-        var result = barcodeReader.Decode(camTexture.GetPixels32(),camTexture.width, camTexture.height);
-        if (result.Text != null)
+        bool done = false;
+        while (!done)
         {
-            Debug.Log("Not quite");
-            text = result.Text;
-            yield return new WaitForSeconds(1);
+            Debug.Log("Not yet");
+            IBarcodeReader barcodeReader = new BarcodeReader();
+            var result = barcodeReader.Decode(camTexture.GetPixels32(), camTexture.width, camTexture.height);
+            if (result != null)
+            {
+                Debug.Log("Not quite");
+                text = result.Text;
+                done = true;
+                yield return null;
+            }
+            else
+            {
+                Debug.Log("Madeit");
+                yield return new WaitForSeconds(1);
+            }
         }
-        Debug.Log("Madeit");
-        yield return new WaitForSeconds(1);
     }
+
+    public void End()
+    {
+
+    }
+
 }
-
-
