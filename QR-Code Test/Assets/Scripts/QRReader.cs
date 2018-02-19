@@ -6,21 +6,16 @@ using UnityEngine.UI;
 using ZXing;
 using ZXing.QrCode;
 
-public class QRReader : MonoBehaviour
+public class QRReader : UIElement
 {
     private bool done = false;
     private WebCamTexture webcamTexture;
     private RawImage rawimage;
     public string text = "";
 
-
-
-    public QRReader()
-    { }
-
-    public void Create()
+    public void Setup()
     {
-        WebCamTexture webcamTexture = new WebCamTexture();
+        webcamTexture = new WebCamTexture();
         rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
         rawimage.material.mainTexture = webcamTexture;
@@ -28,11 +23,6 @@ public class QRReader : MonoBehaviour
         {
             webcamTexture.Play();
         }
-    }
-
-    public void Draw()
-    {
-        //GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
     }
 
     public IEnumerator Read()

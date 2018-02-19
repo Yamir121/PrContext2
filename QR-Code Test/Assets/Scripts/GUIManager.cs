@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class GUIManager : MonoBehaviour
 {
-    //QRReader reader = new QRReader();
+
     public QRReader reader;
 
     private void Start()
     {
-        reader.Create();
         StartCoroutine(reader.Read());
     }
 
