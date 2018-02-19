@@ -7,19 +7,35 @@ public class UIManager : MonoBehaviour
 {
 
     public UIElement qrreader;
+    public UIElement textElement;
     public List<UIElement> UIElements;
+    public static UIManager Instance { get { return _instance; } }
+    private static UIManager _instance;
 
-    private void Start()
+    private void Awake()
     {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+
+private void Start()
+    {
+
+        //adding to the list
         UIElements.Add(qrreader);
+        UIElements.Add(textElement);
+        
+        //qrreader stuff
         QRReader reader = Instantiate(UIElements[0]) as QRReader;
         reader.transform.SetParent(gameObject.GetComponent<Transform>(),false);
         reader.GetComponent<QRReader>().Setup();
         StartCoroutine(reader.Read());
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(0, 0, Screen.width, Screen.height), "DECODED TEXT FROM QR: " + qrreader.GetComponent<QRReader>().text);
-    }
 }

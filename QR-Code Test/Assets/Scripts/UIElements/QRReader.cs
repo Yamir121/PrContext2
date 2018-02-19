@@ -11,7 +11,6 @@ public class QRReader : UIElement
     private bool done = false;
     private WebCamTexture webcamTexture;
     private RawImage rawimage;
-    public string text = "";
 
     public void Setup()
     {
@@ -35,7 +34,8 @@ public class QRReader : UIElement
             if (result != null)
             {
                 Debug.Log("Not quite");
-                text = result.Text;
+                string text = result.Text;
+                AddObject(text);
                 done = true;
                 yield return null;
             }
@@ -46,4 +46,13 @@ public class QRReader : UIElement
             }
         }
     }
+
+    public void AddObject(string text)
+    {
+        //temporarily posts to the screen
+        UIElement textElement = Instantiate(UIManager.Instance.UIElements[1]);
+        textElement.transform.SetParent(UIManager.Instance.gameObject.GetComponent<Transform>(), false);
+        textElement.GetComponent<Text>().text = text;
+    }
+
 }

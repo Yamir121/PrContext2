@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -346,6 +346,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qrreader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
+  textElement: {fileID: 114926927892733764, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
+    type: 2}
   UIElements: []
 --- !u!1 &2083787951
 GameObject:
