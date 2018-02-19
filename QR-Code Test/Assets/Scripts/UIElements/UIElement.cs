@@ -2,15 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIElement : MonoBehaviour {
+public abstract class UIElement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //A UIElement needs an Setup function with all its setup.
+    public abstract void Setup();
+
+    public virtual void Destroy()
+    {
+        Destroy(this.gameObject);
+    }
+
 }

@@ -6,13 +6,13 @@ using UnityEngine.UI;
 using ZXing;
 using ZXing.QrCode;
 
-public class QRReader : UIElement
+public class QRReader : UIElement, ITouchable
 {
-    private bool done = false;
+    private bool started = false;
     private WebCamTexture webcamTexture;
     private RawImage rawimage;
 
-    public void Setup()
+    public override void Setup()
     {
         webcamTexture = new WebCamTexture();
         rawimage = this.GetComponent<RawImage>();
@@ -24,35 +24,49 @@ public class QRReader : UIElement
         }
     }
 
-    public IEnumerator Read()
+    public void Touched()
     {
+        if (Input.GetMouseButtonDown(0) && started == false)
+        {
+            StartCoroutine(Read());
+        }
+    }
+
+    private IEnumerator Read()
+    {
+        started = true;
+        bool done = false;
         while (!done)
         {
-            Debug.Log("Not yet");
             IBarcodeReader barcodeReader = new BarcodeReader();
             var result = barcodeReader.Decode(webcamTexture.GetPixels32(), webcamTexture.width, webcamTexture.height);
             if (result != null)
             {
-                Debug.Log("Not quite");
                 string text = result.Text;
                 AddObject(text);
                 done = true;
+                started = false;
                 yield return null;
             }
             else
             {
-                Debug.Log("Madeit");
                 yield return new WaitForSeconds(1);
             }
         }
     }
 
-    public void AddObject(string text)
+    private void AddObject(string text)
     {
         //temporarily posts to the screen
-        UIElement textElement = Instantiate(UIManager.Instance.UIElements[1]);
-        textElement.transform.SetParent(UIManager.Instance.gameObject.GetComponent<Transform>(), false);
+        UIElement textElement = Instantiate(UIManager.Instance.textElement, UIManager.Instance.transform,false);
         textElement.GetComponent<Text>().text = text;
+    }
+
+    public override void Destroy()
+    {
+        webcamTexture.Stop();
+        UIManager.Instance.activeElements.Remove(this);
+        Destroy(this.gameObject);
     }
 
 }

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
 
-    public UIElement qrreader;
-    public UIElement textElement;
-    public List<UIElement> UIElements;
+    public QRReader qrReader;
+    public TextElement textElement;
+    public List<UIElement> activeElements;
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
 
@@ -24,18 +24,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
-private void Start()
+    private void Start()
     {
-
-        //adding to the list
-        UIElements.Add(qrreader);
-        UIElements.Add(textElement);
-        
-        //qrreader stuff
-        QRReader reader = Instantiate(UIElements[0]) as QRReader;
-        reader.transform.SetParent(gameObject.GetComponent<Transform>(),false);
-        reader.GetComponent<QRReader>().Setup();
-        StartCoroutine(reader.Read());
+        //create qrreader
+        QRReader reader = Instantiate(qrReader, gameObject.transform, false);
+        activeElements.Add(qrReader);
+        reader.Setup();
     }
-
 }

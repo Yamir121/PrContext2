@@ -345,10 +345,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2bf1f51181c2246926a265d00b5ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qrreader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
-  textElement: {fileID: 114926927892733764, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
+  qrReader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
+  textElement: {fileID: 114383085199270328, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
     type: 2}
-  UIElements: []
+  activeElements: []
 --- !u!1 &2083787951
 GameObject:
   m_ObjectHideFlags: 0
