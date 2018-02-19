@@ -31,4 +31,5 @@ public class UIManager : MonoBehaviour
         activeElements.Add(qrReader);
         reader.Setup();
     }
+
 }

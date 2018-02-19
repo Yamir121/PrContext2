@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using ZXing;
 using ZXing.QrCode;
 
-public class QRReader : UIElement, ITouchable
+public class QRReader : UIElement
 {
     private bool started = false;
     private WebCamTexture webcamTexture;
@@ -23,11 +23,12 @@ public class QRReader : UIElement, ITouchable
             webcamTexture.Play();
         }
     }
-
-    public void Touched()
+    
+    public void Update()
     {
         if (Input.GetMouseButtonDown(0) && started == false)
         {
+            Debug.Log("Touch");
             StartCoroutine(Read());
         }
     }
@@ -38,6 +39,7 @@ public class QRReader : UIElement, ITouchable
         bool done = false;
         while (!done)
         {
+            Debug.Log("Reading");
             IBarcodeReader barcodeReader = new BarcodeReader();
             var result = barcodeReader.Decode(webcamTexture.GetPixels32(), webcamTexture.width, webcamTexture.height);
             if (result != null)
