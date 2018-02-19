@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GUIManager : MonoBehaviour
 {
-    QRReader reader = new QRReader();
+    //QRReader reader = new QRReader();
+    public QRReader reader;
 
     private void Start()
     {
@@ -14,8 +15,6 @@ public class GUIManager : MonoBehaviour
 
     private void OnGUI()
     {
-        reader.Draw();
-
         GUI.Label(new Rect(0, 0, Screen.width, Screen.height), "DECODED TEXT FROM QR: " + reader.text);
     }
 }

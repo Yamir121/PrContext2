@@ -2,45 +2,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using ZXing;
 using ZXing.QrCode;
 
-public class QRReader
+public class QRReader : MonoBehaviour
 {
-    private WebCamTexture camTexture;
-    private Rect screenRect;
+    private bool done = false;
+    private WebCamTexture webcamTexture;
+    private RawImage rawimage;
     public string text = "";
+
+
 
     public QRReader()
     { }
 
     public void Create()
     {
-        screenRect = new Rect(0, 0, Screen.width, Screen.height);
-        camTexture = new WebCamTexture
+        WebCamTexture webcamTexture = new WebCamTexture();
+        rawimage = this.GetComponent<RawImage>();
+        rawimage.texture = webcamTexture;
+        rawimage.material.mainTexture = webcamTexture;
+        if (webcamTexture != null)
         {
-            requestedHeight = Screen.height,
-            requestedWidth = Screen.width
-        };
-        if (camTexture != null)
-        {
-            camTexture.Play();
+            webcamTexture.Play();
         }
     }
 
     public void Draw()
     {
-        GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
+        //GUI.DrawTexture(screenRect, camTexture, ScaleMode.ScaleToFit);
     }
 
     public IEnumerator Read()
     {
-        bool done = false;
         while (!done)
         {
             Debug.Log("Not yet");
             IBarcodeReader barcodeReader = new BarcodeReader();
-            var result = barcodeReader.Decode(camTexture.GetPixels32(), camTexture.width, camTexture.height);
+            var result = barcodeReader.Decode(webcamTexture.GetPixels32(), webcamTexture.width, webcamTexture.height);
             if (result != null)
             {
                 Debug.Log("Not quite");
@@ -55,10 +56,4 @@ public class QRReader
             }
         }
     }
-
-    public void End()
-    {
-
-    }
-
 }
