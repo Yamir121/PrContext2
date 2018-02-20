@@ -18,7 +18,7 @@ public class QRReader : UIElement
         rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
         rawimage.material.mainTexture = webcamTexture;
-        rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
+        rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.height, Screen.width);
         if (webcamTexture != null)
         {
             webcamTexture.Play();
