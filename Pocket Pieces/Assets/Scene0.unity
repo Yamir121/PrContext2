@@ -113,111 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &567259924
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1267130360}
-    m_Modifications:
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -0.0000076293945
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: -440
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7bf86467663281e4ab88ed9c8e650422, type: 2}
-  m_IsPrefabParent: 0
---- !u!224 &567259925 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224166816225470002, guid: 7bf86467663281e4ab88ed9c8e650422,
-    type: 2}
-  m_PrefabInternal: {fileID: 567259924}
 --- !u!1 &1267130355
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +146,6 @@ MonoBehaviour:
   qrReader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
   textElement: {fileID: 114383085199270328, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
     type: 2}
-  activeElements: []
 --- !u!114 &1267130357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,8 +212,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 567259925}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
