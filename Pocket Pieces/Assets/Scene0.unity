@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qrReader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
-  textElement: {fileID: 114383085199270328, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
+  textElement: {fileID: 114327667418631686, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
     type: 2}
 --- !u!114 &1267130357
 MonoBehaviour:
