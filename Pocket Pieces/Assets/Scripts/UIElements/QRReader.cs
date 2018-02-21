@@ -17,14 +17,18 @@ public class QRReader : UIElement
         webcamTexture = new WebCamTexture();
         rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
+<<<<<<< HEAD
         //rawimage.material.mainTexture = webcamTexture;
+=======
+        rawimage.material.mainTexture = webcamTexture;
+>>>>>>> 0cc0047f6651f57f5cf4180d9ea041ca73426d10
         rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2((Screen.width * 1.333f), Screen.width);
         if (webcamTexture != null)
         {
             webcamTexture.Play();
         }
     }
-    
+
     public void Update()
     {
         if (Input.GetMouseButtonDown(0) && started == false)
@@ -63,7 +67,7 @@ public class QRReader : UIElement
 /*    private void AddObject(string text)
     {
         //temporarily posts to the screen
-        UIElement textElement = Instantiate(UIManager.Instance.textElement, UIManager.Instance.transform,false);
+        UIElement textElement = Instantiate(UIManager.Instance.textElement, UIManager.Instance.transform, false);
         textElement.GetComponent<Text>().text = text;
     }
 */
