@@ -17,8 +17,8 @@ public class QRReader : UIElement
         webcamTexture = new WebCamTexture();
         rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
-        rawimage.material.mainTexture = webcamTexture;
-        rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2(Screen.width, Screen.height);
+        //rawimage.material.mainTexture = webcamTexture;
+        rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2((Screen.width * 1.333f), Screen.width);
         if (webcamTexture != null)
         {
             webcamTexture.Play();
@@ -29,8 +29,9 @@ public class QRReader : UIElement
     {
         if (Input.GetMouseButtonDown(0) && started == false)
         {
+            DataManager.Instance.HandleQR("1");
             Debug.Log("Touch");
-            StartCoroutine(Read());
+           // StartCoroutine(Read());
         }
     }
 
@@ -46,7 +47,7 @@ public class QRReader : UIElement
             if (result != null)
             {
                 string text = result.Text;
-                AddObject(text);
+                DataManager.Instance.HandleQR(text);
                 Handheld.Vibrate();
                 done = true;
                 started = false;
@@ -59,17 +60,17 @@ public class QRReader : UIElement
         }
     }
 
-    private void AddObject(string text)
+/*    private void AddObject(string text)
     {
         //temporarily posts to the screen
         UIElement textElement = Instantiate(UIManager.Instance.textElement, UIManager.Instance.transform,false);
         textElement.GetComponent<Text>().text = text;
     }
+*/
 
     public override void Destroy()
     {
         webcamTexture.Stop();
-        UIManager.Instance.activeElements.Remove(this);
         Destroy(this.gameObject);
     }
 

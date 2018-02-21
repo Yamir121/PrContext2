@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
     public QRReader qrReader;
     public TextElement textElement;
-    [HideInInspector] public List<UIElement> activeElements;
+
+    private UIElement activeElement;
+
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
 
@@ -27,17 +28,18 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        StartQRReader();
+        CreateScreen(qrReader);
     }
 
-    private void StartQRReader()
+    private void CreateScreen(UIElement preFab)
     {
-        //create qrreader
-        if (!activeElements.Contains(qrReader))
+        System.Type type = preFab.GetType();
+        if (activeElement == null || activeElement.GetType() != type)
         {
-            QRReader reader = Instantiate(qrReader, gameObject.transform, false);
-            activeElements.Add(qrReader);
-            reader.Setup();
+            if (activeElement != null) { activeElement.Destroy(); }
+            activeElement = Instantiate(qrReader, gameObject.transform, false);
+            activeElement.Setup();
         }
     }
+
 }
