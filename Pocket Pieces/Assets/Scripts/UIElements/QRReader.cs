@@ -14,14 +14,11 @@ public class QRReader : UIElement
 
     public override void Setup()
     {
+        //draw inventory at top of screen
+
         webcamTexture = new WebCamTexture();
         rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
-<<<<<<< HEAD
-        //rawimage.material.mainTexture = webcamTexture;
-=======
-        rawimage.material.mainTexture = webcamTexture;
->>>>>>> 0cc0047f6651f57f5cf4180d9ea041ca73426d10
         rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2((Screen.width * 1.333f), Screen.width);
         if (webcamTexture != null)
         {
@@ -29,11 +26,14 @@ public class QRReader : UIElement
         }
     }
 
-    public void Update()
+    private void Update()
     {
         if (Input.GetMouseButtonDown(0) && started == false)
         {
-            DataManager.Instance.HandleQR("1");
+           
+            //change this
+            DataManager.Instance.HandleQR("2");
+            DrawInventory();
             Debug.Log("Touch");
            // StartCoroutine(Read());
         }
@@ -52,6 +52,7 @@ public class QRReader : UIElement
             {
                 string text = result.Text;
                 DataManager.Instance.HandleQR(text);
+                DrawInventory();
                 Handheld.Vibrate();
                 done = true;
                 started = false;
@@ -71,6 +72,20 @@ public class QRReader : UIElement
         textElement.GetComponent<Text>().text = text;
     }
 */
+
+    private void DrawInventory()
+    {
+        int index = 0;
+        foreach (Waste w in DataManager.Instance.inv)
+        {
+            Waste newW = Instantiate(DataManager.Instance.waste, UIManager.Instance.transform, false);
+            newW.type = w.type;
+            float xPos = index * 2.3f;
+            float yPos = index * 2.3f;
+            newW.Draw(xPos, yPos);
+            index++;
+        }
+    }
 
     public override void Destroy()
     {

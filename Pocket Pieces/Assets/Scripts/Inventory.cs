@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : List<Waste> {
+
+public class Inventory : List<Item> {
 
     
     public void LogList()
@@ -12,6 +13,7 @@ public class Inventory : List<Waste> {
             Debug.Log(w.GetWasteType());
         }
     }
+
 
 
 

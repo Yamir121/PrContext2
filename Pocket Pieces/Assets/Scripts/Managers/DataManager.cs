@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DataManager : MonoBehaviour {
+    //move this
+    public Sprite circle;
+    public Sprite triangle;
+    public Sprite rectangle;
+    public Waste waste;
 
     public enum WasteType { Circle, Triangle, Rectangle };
     public Inventory inv = new Inventory();
