@@ -41,7 +41,7 @@ public class DataManager : MonoBehaviour {
         if(wasteList.ContainsKey(_code))
         {            
             inv.Add(wasteList[_code]);
-            wasteList.Remove(_code);
+            //wasteList.Remove(_code);
             inv.LogList();
         }
     }
