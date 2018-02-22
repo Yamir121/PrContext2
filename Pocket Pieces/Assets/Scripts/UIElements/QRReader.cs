@@ -33,7 +33,7 @@ public class QRReader : UIElement
            
             //change this
             DataManager.Instance.HandleQR("2");
-            DrawInventory();
+            //DrawInventory();
             Debug.Log("Touch");
            // StartCoroutine(Read());
         }
@@ -52,7 +52,7 @@ public class QRReader : UIElement
             {
                 string text = result.Text;
                 DataManager.Instance.HandleQR(text);
-                DrawInventory();
+                //DrawInventory();
                 Handheld.Vibrate();
                 done = true;
                 started = false;
@@ -72,20 +72,6 @@ public class QRReader : UIElement
         textElement.GetComponent<Text>().text = text;
     }
 */
-
-    private void DrawInventory()
-    {
-        int index = 0;
-        foreach (Waste w in DataManager.Instance.inv)
-        {
-            Waste newW = Instantiate(DataManager.Instance.waste, UIManager.Instance.transform, false);
-            newW.type = w.type;
-            float xPos = index * 2.3f;
-            float yPos = index * 2.3f;
-            newW.Draw(xPos, yPos);
-            index++;
-        }
-    }
 
     public override void Destroy()
     {

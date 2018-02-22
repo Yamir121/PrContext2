@@ -144,6 +144,7 @@ MonoBehaviour:
   triangle: {fileID: 21300000, guid: 23c2adda6b72e3b4098205c004a7ae70, type: 3}
   rectangle: {fileID: 21300000, guid: f250ed17f9fb2e443823f5bfb1a27d44, type: 3}
   waste: {fileID: 114190324155053888, guid: 212ce73638e04d74ab0618c06abcd880, type: 2}
+  inv: {fileID: 114652674819168786, guid: ef23adac89b354c4f97687051c7a5c84, type: 2}
 --- !u!4 &1084056259
 Transform:
   m_ObjectHideFlags: 0
@@ -187,9 +188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc2bf1f51181c2246926a265d00b5ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circle: {fileID: 21300000, guid: 4f370c121c072364bb86433d094619c1, type: 3}
-  triangle: {fileID: 0}
-  rectangle: {fileID: 0}
   qrReader: {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
   textElement: {fileID: 114327667418631686, guid: dd185adbe55a4ee49bf8bf0460ed44f6,
     type: 2}
