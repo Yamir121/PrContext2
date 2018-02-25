@@ -30,12 +30,8 @@ public class QRReader : UIElement
     {
         if (Input.GetMouseButtonDown(0) && started == false)
         {
-           
-            //change this
-            DataManager.Instance.HandleQR("2");
-            //DrawInventory();
-            Debug.Log("Touch");
-           // StartCoroutine(Read());
+           Debug.Log("Touch");
+           StartCoroutine(Read());
         }
     }
 
@@ -48,15 +44,25 @@ public class QRReader : UIElement
             Debug.Log("Reading");
             IBarcodeReader barcodeReader = new BarcodeReader();
             var result = barcodeReader.Decode(webcamTexture.GetPixels32(), webcamTexture.width, webcamTexture.height);
-            if (result != null)
+            int code;
+            //Checks if there is a result of the scan and if it is an int.
+            if (result != null && int.TryParse(result.Text,out code))
             {
-                string text = result.Text;
-                DataManager.Instance.HandleQR(text);
-                //DrawInventory();
-                Handheld.Vibrate();
-                done = true;
-                started = false;
-                yield return null;
+                //Let the DataManager handle the QR, only if the Manager succeeds, the QRReader stops reading. 
+                if (DataManager.Instance.HandleQR(code))
+                {
+                    Handheld.Vibrate();
+                    //popup: item added!
+                    done = true;
+                    started = false;                 
+                    yield return null;
+                }
+                else
+                {
+                    Handheld.Vibrate();
+                    //popup: item already scanned or wrong qrcode
+                    yield return new WaitForSeconds(1);
+                }
             }
             else
             {
@@ -64,14 +70,6 @@ public class QRReader : UIElement
             }
         }
     }
-
-/*    private void AddObject(string text)
-    {
-        //temporarily posts to the screen
-        UIElement textElement = Instantiate(UIManager.Instance.textElement, UIManager.Instance.transform, false);
-        textElement.GetComponent<Text>().text = text;
-    }
-*/
 
     public override void Destroy()
     {

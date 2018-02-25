@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class DataManager : MonoBehaviour
 {
-    //move this
-    public Sprite circle;
-    public Sprite triangle;
-    public Sprite rectangle;
-    public Waste waste;
-
     public enum WasteType { Circle, Triangle, Rectangle };
-    public Inventory inv;
-    private Dictionary<int, Waste> wasteList = new Dictionary<int, Waste>();
+
+    private Dictionary<int, WasteType> qrCodes = new Dictionary<int, WasteType>();
 
     public static DataManager Instance { get { return _instance; } }
     private static DataManager _instance;
@@ -31,24 +25,22 @@ public class DataManager : MonoBehaviour
 
     private void Start()
     {
-        wasteList.Add(1, new Waste(WasteType.Circle, 1));
-        wasteList.Add(2, new Waste(WasteType.Triangle, 2));
-        wasteList.Add(3, new Waste(WasteType.Rectangle, 3));
-
-        inv = Instantiate(inv, UIManager.Instance.transform, false);
-
+        qrCodes.Add(1,WasteType.Circle);
+        qrCodes.Add(2, WasteType.Circle);
+        qrCodes.Add(3, WasteType.Circle);
     }
 
-    public void HandleQR(string code)
+    public bool HandleQR(int code)
     {
-        int _code = int.Parse(code);
-        if (wasteList.ContainsKey(_code))
+        if (qrCodes.ContainsKey(code))
         {
-            foreach (Waste w in inv.list)
-            { w.Destroy(); }
-            inv.Add(wasteList[_code]);
-            wasteList.Remove(_code);
-            inv.LogList();
+            qrCodes.Remove(code);
+            //add to inventory
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

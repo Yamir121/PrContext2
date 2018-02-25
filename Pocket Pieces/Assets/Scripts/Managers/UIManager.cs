@@ -8,11 +8,12 @@ public class UIManager : MonoBehaviour
 {
 
     public QRReader qrReader;
-    public TextElement textElement;
+    public TextPrompt textPrompt;
 
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
     private UIElement activeElement;
+    private PopUp activePopUp;
 
     private void Awake()
     {
@@ -31,7 +32,7 @@ public class UIManager : MonoBehaviour
         CreateScreen(qrReader);
     }
 
-    private void CreateScreen(UIElement preFab)
+    public void CreateScreen(UIElement preFab)
     {
         System.Type type = preFab.GetType();
         if (activeElement == null || activeElement.GetType() != type)
@@ -42,4 +43,14 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void CreatePopUp(PopUp preFab,string message)
+    { System.Type type = preFab.GetType();
+        if (activePopUp == null || activePopUp.GetType() != type)
+        {
+            if (activePopUp != null) { activePopUp.Destroy(); }
+            activePopUp = Instantiate(preFab, gameObject.transform, false) as TextPrompt;
+            activePopUp.Setup();
+            StartCoroutine(activePopUp.StartPopUp(message));
+        }
+    }
 }
