@@ -79,6 +79,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIElements:
+  - {fileID: 114565669468042280, guid: 04bd87da17e39db4d83b4eb19111174a, type: 2}
+  - {fileID: 114910672917368898, guid: 15d7622c1db237142bcf81903fbae3a4, type: 2}
+  - {fileID: 114984726123190332, guid: 0b107ffab9d624b4fbe4da5f5740e1fd, type: 2}
   - {fileID: 114779313000051584, guid: b7a4bd7996be19540b75b4008e013ec7, type: 2}
   PopUps:
   - {fileID: 114261616611218948, guid: 057954181eaa70146b1ef3b313458574, type: 2}

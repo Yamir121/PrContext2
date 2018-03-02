@@ -113,6 +113,106 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &228679310
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224309638546275612, guid: e5b9d85c84362d8409171583f88a5d04,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e5b9d85c84362d8409171583f88a5d04, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1285541839
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,7 +358,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.6838235, g: 0.6838235, b: 0.6838235, a: 0}
+  m_BackGroundColor: {r: 0.24264705, g: 0.24264705, b: 0.278, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

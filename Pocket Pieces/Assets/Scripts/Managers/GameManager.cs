@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
 
         if (UIManager.Instance == null)
         {
-            Instantiate(uiManager);
+        //    Instantiate(uiManager);
         }
     }
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
     private void Start() 
     {
         UIManager.Instance.CreateScreen(0);
-        UIManager.Instance.CreatePopUp(0, "Hello World");
+        //UIManager.Instance.CreatePopUp(0, "Hello World");
     }
 
 }
