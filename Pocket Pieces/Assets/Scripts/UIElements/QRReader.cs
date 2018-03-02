@@ -49,10 +49,10 @@ public class QRReader : UIElement
             if (result != null && int.TryParse(result.Text,out code))
             {
                 //Let the DataManager handle the QR, only if the Manager succeeds, the QRReader stops reading. 
-                if (DataManager.Instance.HandleQR(code))
+                if (GameManager.dataManager.HandleQR(code))
                 {
                     Handheld.Vibrate();
-                    //popup: item added!
+                    UIManager.Instance.CreatePopUp(1, "Item Found!");
                     done = true;
                     started = false;                 
                     yield return null;
@@ -60,7 +60,7 @@ public class QRReader : UIElement
                 else
                 {
                     Handheld.Vibrate();
-                    //popup: item already scanned or wrong qrcode
+                    UIManager.Instance.CreatePopUp(0, "Item Already Scanned!");
                     yield return new WaitForSeconds(1);
                 }
             }

@@ -17,6 +17,8 @@ public class TextPrompt : PopUp {
     {
         textComp.text = message;
         yield return new WaitForSeconds(3);
+        textComp.text = "";
+        this.Destroy();
         yield return null;
     }
 

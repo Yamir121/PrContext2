@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-
-    public QRReader qrReader;
-    public TextPrompt textPrompt;
+    public UIElement[] UIElements = {};
+    public PopUp[] PopUps = { };
 
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
@@ -25,32 +24,34 @@ public class UIManager : MonoBehaviour
         {
             _instance = this;
         }
+
+
+
     }
 
-    private void Start()
+    public void CreateScreen(int index)
     {
-        CreateScreen(qrReader);
-    }
-
-    public void CreateScreen(UIElement preFab)
-    {
+        UIElement preFab = UIElements[index];
         System.Type type = preFab.GetType();
         if (activeElement == null || activeElement.GetType() != type)
         {
             if (activeElement != null) { activeElement.Destroy(); }
-            activeElement = Instantiate(qrReader, gameObject.transform, false);
+            activeElement = Instantiate(preFab, gameObject.transform, false);
             activeElement.Setup();
         }
     }
 
-    public void CreatePopUp(PopUp preFab,string message)
-    { System.Type type = preFab.GetType();
+    public void CreatePopUp(int index,string message)
+    {
+        PopUp preFab = PopUps[index];
+        System.Type type = preFab.GetType();
         if (activePopUp == null || activePopUp.GetType() != type)
         {
             if (activePopUp != null) { activePopUp.Destroy(); }
-            activePopUp = Instantiate(preFab, gameObject.transform, false) as TextPrompt;
+            activePopUp = Instantiate(preFab, gameObject.transform, false);
             activePopUp.Setup();
             StartCoroutine(activePopUp.StartPopUp(message));
         }
     }
+
 }

@@ -8,21 +8,6 @@ public class DataManager : MonoBehaviour
 
     private Dictionary<int, WasteType> qrCodes = new Dictionary<int, WasteType>();
 
-    public static DataManager Instance { get { return _instance; } }
-    private static DataManager _instance;
-
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-
     private void Start()
     {
         qrCodes.Add(1,WasteType.Circle);
