@@ -284,15 +284,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4676640297506906, guid: 39f34b92241730540b8ddfbf2216d2ab, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 290.927
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676640297506906, guid: 39f34b92241730540b8ddfbf2216d2ab, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 308.63293
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676640297506906, guid: 39f34b92241730540b8ddfbf2216d2ab, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -7.125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676640297506906, guid: 39f34b92241730540b8ddfbf2216d2ab, type: 2}
       propertyPath: m_LocalRotation.x
@@ -358,7 +358,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.24264705, g: 0.24264705, b: 0.278, a: 0}
+  m_BackGroundColor: {r: 0.2352941, g: 0.2352941, b: 0.2352941, a: 0.835}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

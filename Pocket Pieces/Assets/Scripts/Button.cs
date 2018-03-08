@@ -20,5 +20,6 @@ public class Button : MonoBehaviour {
     public void OnClick()
     {
         UIManager.Instance.CreateScreen(screen);
+//        Handheld.Vibrate();
     }
 }

@@ -104,7 +104,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359888729807266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -400, y: -640.14087, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224152632252601550}
@@ -145,17 +145,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 2
-  m_Text: '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis
-    et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-    eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-    ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
-    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-    enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-    nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-    qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui
-    dolorem eum fugiat quo voluptas nulla pariatur?"'
+  m_Text: "You can make these Things by finding Waste around the school, in form of
+    a QR-code which you can scan to add them to your inventory. By using blueprints
+    you can then make your own Things, however crafting these Things creates pollution.
+    By using more precious waste, your can reduce your pollution output, as well as
+    create more \ndurable things."
 --- !u!114 &114285811060612474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.29411766, g: 0.8, b: 0.7607843, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -178,7 +172,7 @@ MonoBehaviour:
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
-  m_FillCenter: 1
+  m_FillCenter: 0
   m_FillMethod: 4
   m_FillAmount: 1
   m_FillClockwise: 1
@@ -247,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -259,7 +253,7 @@ MonoBehaviour:
     m_FontSize: 40
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -385,8 +379,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1, y: 0}
   m_AnchorMax: {x: 0.9, y: 0.8}
-  m_AnchoredPosition: {x: 400, y: 512.1127}
-  m_SizeDelta: {x: 640, y: 1024.2255}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 640, y: 835.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224512499082062962
 RectTransform:
@@ -404,7 +398,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.2, y: 0.1}
   m_AnchorMax: {x: 0.8, y: 0.2}
-  m_AnchoredPosition: {x: 400, y: 128.0282}
+  m_AnchoredPosition: {x: 0, y: -500}
   m_SizeDelta: {x: 480, y: 128.02817}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224652967270190788
@@ -422,6 +416,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.95}
-  m_AnchoredPosition: {x: 400, y: 608.1338}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 800, y: 1216.2676}
   m_Pivot: {x: 0.5, y: 0.5}
