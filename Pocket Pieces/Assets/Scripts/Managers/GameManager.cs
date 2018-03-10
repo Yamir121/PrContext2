@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public static DataManager dataManager;
 
@@ -28,12 +29,12 @@ public class GameManager : MonoBehaviour {
 
         if (UIManager.Instance == null)
         {
-        //    Instantiate(uiManager);
+            //    Instantiate(uiManager);
         }
     }
 
     //start wordt 1x van begin tot eind uitgevoerd zodra het gameobject waar het script op zit wordt geinstantiate. 
-    private void Start() 
+    private void Start()
     {
         UIManager.Instance.CreateScreen(0);
         //UIManager.Instance.CreatePopUp(0, "Hello World");

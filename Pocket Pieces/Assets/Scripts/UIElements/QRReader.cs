@@ -11,13 +11,14 @@ public class QRReader : UIElement
     private bool started = false;
     private WebCamTexture webcamTexture;
     private RawImage rawimage;
+    public int qrScoreValue = 1; //waarde per gescande QR code
 
     public override void Setup()
     {
         //draw inventory at top of screen
 
         webcamTexture = new WebCamTexture(); //functie van unity. pakt data van webcam op device en maakt er een texture van
-        rawimage = this.GetComponent<RawImage>(); 
+        rawimage = this.GetComponent<RawImage>();
         rawimage.texture = webcamTexture;
         rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2((Screen.width * 1.333f), Screen.width); //height en width (vector2). aan width voegt hij een constante toe om width&height goed te houden
         if (webcamTexture != null) //start webcamtexture
@@ -30,14 +31,14 @@ public class QRReader : UIElement
     {
         if (Input.GetMouseButtonDown(0) && started == false) //tappen
         {
-           Debug.Log("Touch");
-           StartCoroutine(Read()); //functie die gestopt kan worden of kan pauzeren
+            Debug.Log("Touch");
+            StartCoroutine(Read()); //functie die gestopt kan worden of kan pauzeren
         }
     }
 
     private IEnumerator Read()  //dit is de coroutine
     {
-        started = true; 
+        started = true;
         bool done = false;
         while (!done)
         {
@@ -47,16 +48,20 @@ public class QRReader : UIElement
             int code;
 
             //Checks if there is a result of the scan and if it is an int.
-            if (result != null && int.TryParse(result.Text,out code)) //tryparse barcode geeft je een string, en zet deze om tot integer. als dat lukt geeft hij een true
+            if (result != null && int.TryParse(result.Text, out code)) //tryparse barcode geeft je een string, en zet deze om tot integer. als dat lukt geeft hij een true
             {
                 //Let the DataManager handle the QR, only if the Manager succeeds, the QRReader stops reading. 
                 if (GameManager.dataManager.HandleQR(code))
                 {
                     Handheld.Vibrate();
+                    GameManager.dataManager.addToScore(qrScoreValue);
+
                     UIManager.Instance.CreatePopUp(1, "Item Found!");
-                    
+
+                    //dataManager.score += qrScoreValue; //als er een code is gevonden, tel score op
+
                     done = true;
-                    started = false;                 
+                    started = false;
                     yield return null;  //sluit coroutine af
                 }
                 else // als code niet meer in de database zit(code al gescand), dan:
