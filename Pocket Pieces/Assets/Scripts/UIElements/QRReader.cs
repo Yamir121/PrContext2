@@ -12,6 +12,7 @@ public class QRReader : UIElement
     private WebCamTexture webcamTexture;
     private RawImage rawimage;
     public int qrScoreValue = 1; //waarde per gescande QR code
+    public Item item;
 
     public override void Setup()
     {
@@ -53,12 +54,15 @@ public class QRReader : UIElement
                 //Let the DataManager handle the QR, only if the Manager succeeds, the QRReader stops reading. 
                 if (GameManager.dataManager.HandleQR(code))
                 {
+                   
                     Handheld.Vibrate();
                     GameManager.dataManager.addToScore(qrScoreValue);
 
+                    AddToInventory();
+
                     UIManager.Instance.CreatePopUp(1, "Item Found!");
 
-                    //dataManager.score += qrScoreValue; //als er een code is gevonden, tel score op
+
 
                     done = true;
                     started = false;
@@ -84,4 +88,14 @@ public class QRReader : UIElement
         Destroy(this.gameObject);
     }
 
+    void AddToInventory()
+    {
+        Debug.Log("Adding item to inventory");
+        bool isScanned = InventoryScript2.instance.Add(item);
+
+        if (isScanned)
+        {
+            //verwijder hier de QR code uit het systeem?
+        }
+    }
 }

@@ -19,7 +19,7 @@ public class InventoryScript1 : MonoBehaviour {
             if (items[i] == null)
             {
                 items[i] = itemToAdd;
-                itemImages[i].sprite = itemToAdd.sprite;
+                itemImages[i].sprite = itemToAdd.icon;
                 itemImages[i].enabled = true;
                 return;
             }

@@ -282,6 +282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qrScoreValue: 1
+  item: {fileID: 11400000, guid: 57e805802cc6f0a4392c33a09857b19c, type: 2}
 --- !u!114 &114846878183467700
 MonoBehaviour:
   m_ObjectHideFlags: 1
