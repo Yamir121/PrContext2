@@ -36,9 +36,9 @@ public class InventoryScript2 : MonoBehaviour
             Debug.Log("Not enough room in inventory");
             return false;
         }
-
-
-        items.Add(item);
+        else{
+            items.Add(item);
+        }
 
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();

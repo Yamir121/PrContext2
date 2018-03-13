@@ -18,6 +18,7 @@ public class DataManager : MonoBehaviour
 
     // alle variabelen voor de timer
 
+    public Item item;
     public string timerText;
     float timeLeft = 900.0f;
     public bool stop = true;
@@ -35,6 +36,13 @@ public class DataManager : MonoBehaviour
         qrCodes.Add(1, WasteType.Circle);
         qrCodes.Add(2, WasteType.Circle);
         qrCodes.Add(3, WasteType.Circle);
+        //qrCodes.Add(4, WasteType.Rectangle);
+        //qrCodes.Add(5, WasteType.Rectangle);
+        //qrCodes.Add(6, WasteType.Rectangle);
+        //qrCodes.Add(7, WasteType.Triangle);
+        //qrCodes.Add(8, WasteType.Triangle);
+        //qrCodes.Add(9, WasteType.Triangle);
+
 
         //qrCodes.add(4,WasteType.Triangle);  dus nummer 4= code van de qr code en wastetype geeft aan welk type het is
 
@@ -99,5 +107,16 @@ public class DataManager : MonoBehaviour
     {
         score += number;
 
+    }
+
+    public void AddToInventory()
+    {
+        Debug.Log("Adding item to inventory");
+        bool isScanned = InventoryScript2.instance.Add(item);
+
+        if (isScanned)
+        {
+            //verwijder hier de QR code uit het systeem?
+        }
     }
 }

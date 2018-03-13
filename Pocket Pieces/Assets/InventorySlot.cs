@@ -7,6 +7,7 @@ public class InventorySlot : MonoBehaviour {
     public Image icon;
     Item item;
     
+    
 
     public void AddItem (Item newItem)
     {
@@ -21,5 +22,7 @@ public class InventorySlot : MonoBehaviour {
         item = null;
         icon.sprite = null;
         icon.enabled = false;
+
+        
     }
 }
