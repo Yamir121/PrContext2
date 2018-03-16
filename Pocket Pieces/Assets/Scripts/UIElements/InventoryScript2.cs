@@ -24,20 +24,20 @@ public class InventoryScript2 : MonoBehaviour
 
     public int space = 9;
 
-    public List<Item> items = new List<Item>();
+    public List<Item> wasteList = new List<Item>();
 
     public static InventoryScript2 instance;
 
     public bool Add(Item item)
     {
 
-        if (items.Count >= space)
+        if (wasteList.Count >= space)
         {
             Debug.Log("Not enough room in inventory");
             return false;
         }
         else{
-            items.Add(item);
+            wasteList.Add(item);
         }
 
         if (onItemChangedCallback != null)
@@ -49,7 +49,7 @@ public class InventoryScript2 : MonoBehaviour
 
     public void Remove(Item item)
     {
-        items.Remove(item);
+        wasteList.Remove(item);
         if (onItemChangedCallback != null)
             onItemChangedCallback.Invoke();
     }
