@@ -28,6 +28,7 @@ public class Button : MonoBehaviour
     {
        
         UIManager.Instance.CreateScreen(screen);
+        AudioManager.Instance.audioSources[1].Play();  
         
         //        Handheld.Vibrate();
     }

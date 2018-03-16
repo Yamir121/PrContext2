@@ -7,6 +7,6 @@ public class Trading : UIElement
 
     public override void Setup()
     {
-
+        Instantiate(UIManager.Instance.menu, gameObject.transform, false);  
     }
 }

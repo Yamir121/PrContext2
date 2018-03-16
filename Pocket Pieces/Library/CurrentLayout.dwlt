@@ -90,10 +90,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 1
-  controlID: 148
+  controlID: 9
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,10 +139,10 @@ MonoBehaviour:
     y: 0
     width: 304
     height: 947
-  m_MinSize: {x: 234, y: 471}
-  m_MaxSize: {x: 10004, y: 14021}
+  m_MinSize: {x: 234, y: 492}
+  m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
-  controlID: 106
+  controlID: 32
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,10 +208,10 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 149
+  controlID: 10
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,8 +250,8 @@ MonoBehaviour:
     y: 0
     width: 304
     height: 427
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -364,9 +364,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e0050000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 128dfeffb08dfeffe48efefffa9efeff009ffeff12d2feffa2d2feffa4d2feffbad2feffccd2feffd2d2feffccdffeffcedffeff86e0feff8ce0feffa400ffff7a1bffff7e1bffff821bfffffa1bfffffc1bffffe427ffffe627ffffa445ffffbe45fffff245fffffe45ffff2446ffff2646ffffe252ffffe452ffff5867ffffb092ffffe492ffff1693ffff1893ffffa8a1ffffaea1ffffc6d6fffffcd6ffff36d7ffff38d7ffff9efbffff00000000e6280000
+    m_SelectedIDs: 7630f3ff
+    m_LastClickedID: -839562
+    m_ExpandedIDs: 7630f3ff3200f4ff9a0af4ffa00af4ffd23ef4ffda3ef4ffa050f4ffd867f4ffe467f4ff8a32f5ff8c32f5ff8e32f5ff9032f5ff9232f5ff9632f5ffda6cf5ff58b4f5ff34b7f5ff22bdf5ff92c3f5ff7ee0f5ffb80ef6ffc622f6ff7233f6ff7a33f6ffa852f6ff1459f6ff7c59f6ff4c66f6ffb466f6ffd272f6ffd481f6ffdc88f6ff769ef6ffead7f6fff0d7f6ff58d8f6ffb6e6f6ff22f4f6ff4afbf6ffdc16f7ffe216f7ff362ef7ff3c2ef7ffa42ef7ffde49f7ffecb9f7ffeeb9f7ffd4c2f7ff28cff7ff9409f8ffec0af8ff1830f8ff923ef8ffea6ff8ffec6ff8ff0081f8ffaca6f8ffaea6f8ffc4b3f8ff4ccbf8ff5092f9ff5292f9ff5492f9ff5692f9ff5892f9ff5c92f9ffc697f9ff44d2f9ffa0e8f9ffd4ebf9ffec58faff926efaff986efaff5ee4faff64e4faff5e70fbff6270fbff4886fbffcae5fbffcee5fbffe808fcffec08fcff7456fcff7856fcffc8fffcfff228fdff982afdff2e40fdff3840fdffa64afdff1219feff1419feff0658feff3858feff7058feff7258feffba75feff6e8afeff3aedfeff3e47ffff4447ffff5451ffff5a51ffffce59ffffd459ffff3c7dffff909affffa0ceffff9efbffff0000000010290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -462,20 +462,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scripts/Inventory
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scripts/Inventory
   m_LastFoldersGridSize: 16
   m_LastProjectPath: H:\PC\School\HKU Leerjaar 2\Project Context\programmeren\PrContext2\Pocket
     Pieces
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90280000
-    m_LastClickedID: 10384
-    m_ExpandedIDs: 000000008c270000ba27000090280000ffffff7f
+    m_SelectedIDs: ce270000
+    m_LastClickedID: 10190
+    m_ExpandedIDs: 000000008c270000ca270000bc280000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -503,7 +503,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c270000ba27000090280000
+    m_ExpandedIDs: 000000008c270000ca270000bc280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -531,21 +531,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 2258fcff4831faff9a58f8ff74d4f8ffc8270000d627000028280000000000006278f9ff5c2800009e2700006c28000094270000aa2700008c280000
+    m_ExpandedInstanceIDs: 2258fcff4831faff9a58f8ff74d4f8ffc8270000d6270000282800006278f9ff5c2800009e27000094270000aa2700008c280000e4050000000000009e280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: InventorySlot
+      m_OriginalName: InventorySlot
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 1842
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_CreateAssetUtility:
@@ -663,14 +663,14 @@ MonoBehaviour:
     height: 707
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 0
-  lastFramingTime: 6452.665431255325
+  lastFramingTime: 12204.546345176452
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -157.20943, y: 289.09595, z: -2.6790686}
+    m_Target: {x: 109.16226, y: 471.6801, z: 3.8688924}
     speed: 2
-    m_Value: {x: -157.20943, y: 289.09595, z: -2.6790686}
+    m_Value: {x: 109.16226, y: 471.6801, z: 3.8688924}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -698,9 +698,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 919.44147
+    m_Target: 891.0132
     speed: 2
-    m_Value: 919.44147
+    m_Value: 891.0132
   m_Ortho:
     m_Target: 1
     speed: 2

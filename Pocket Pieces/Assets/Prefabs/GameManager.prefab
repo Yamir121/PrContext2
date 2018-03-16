@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4676640297506906}
   - component: {fileID: 114796834913651444}
   - component: {fileID: 114532292638330284}
+  - component: {fileID: 114029501532330420}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -41,6 +42,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114029501532330420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1160694880875930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00914e7193a3894d890a31300d93c0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  space: 9
+  items: []
 --- !u!114 &114532292638330284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -53,7 +67,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  item: {fileID: 11400000, guid: 57e805802cc6f0a4392c33a09857b19c, type: 2}
+  circle: {fileID: 11400000, guid: 2ee135d3cb7b0684ea24bbd7550ea80d, type: 2}
+  triangle: {fileID: 11400000, guid: 5c5b5e1a70fd02d49b36a9c992608cb9, type: 2}
+  rectangle: {fileID: 11400000, guid: 0dd52dd975cb05b40b1da50ffce747f7, type: 2}
   timerText: 
   stop: 1
 --- !u!114 &114796834913651444

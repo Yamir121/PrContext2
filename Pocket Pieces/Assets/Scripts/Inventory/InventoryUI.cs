@@ -3,17 +3,20 @@
 public class InventoryUI : MonoBehaviour
 {
 
-    public Transform itemsParent;
+    public Transform waste;
+    public Transform things;
     InventoryScript2 inventory;
 
-    InventorySlot[] slots;
+    //InventorySlot[] wasteSlots;
+    
 
     void Start()
     {
         inventory = InventoryScript2.instance;
         inventory.onItemChangedCallback += UpdateUI;
 
-        slots = itemsParent.GetComponentsInChildren<InventorySlot>();
+        slots = waste.GetComponentsInChildren<InventorySlot>();
+        thingsSlots = things.GetComponentInChildren<inventorySlot>();
     }
 
     // Update is called once per frame

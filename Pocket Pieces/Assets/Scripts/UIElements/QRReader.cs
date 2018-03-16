@@ -19,13 +19,15 @@ public class QRReader : UIElement
 
 
         webcamTexture = new WebCamTexture(); //functie van unity. pakt data van webcam op device en maakt er een texture van
-        rawimage = this.GetComponent<RawImage>();
+        rawimage = GetComponentInChildren<RawImage>();
+        //rawimage = this.GetComponentFromChild<RawImage>();
         rawimage.texture = webcamTexture;
         rawimage.GetComponent<RectTransform>().sizeDelta = new Vector2((Screen.width * 1.333f), Screen.width); //height en width (vector2). aan width voegt hij een constante toe om width&height goed te houden
         if (webcamTexture != null) //start webcamtexture
         {
             webcamTexture.Play();
         }
+        Instantiate(UIManager.Instance.menu, gameObject.transform, false);
     }
 
     private void Update()
@@ -58,11 +60,11 @@ public class QRReader : UIElement
                     Handheld.Vibrate();
                     GameManager.dataManager.addToScore(qrScoreValue);
                     Debug.Log(" score added");
-                    GameManager.dataManager.AddToInventory();
+
                     Debug.Log("added to inventory");
 
 
-                    UIManager.Instance.CreatePopUp(1, "Item Found!");
+                    UIManager.Instance.CreatePopUp(1, "You found waste. Check your inventory!");
 
 
 

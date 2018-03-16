@@ -17,6 +17,7 @@ public class TextWithButton : PopUp {
 
     public void OnClick()
     {
+        
         this.Destroy();
     }
 }

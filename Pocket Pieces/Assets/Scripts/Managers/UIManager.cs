@@ -6,13 +6,15 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public UIElement[] UIElements = {};
+    public UIElement[] UIElements = { };
     public PopUp[] PopUps = { };
+    public GameObject menu;
 
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
     private UIElement activeElement;
     private PopUp activePopUp;
+
 
     private void Awake()
     {
@@ -29,6 +31,12 @@ public class UIManager : MonoBehaviour
 
     }
 
+    private void Start()
+    {
+        
+    }
+
+
     public void CreateScreen(int index)
     {
         UIElement preFab = UIElements[index];
@@ -41,7 +49,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void CreatePopUp(int index,string message)
+    public void CreatePopUp(int index, string message)
     {
         PopUp preFab = PopUps[index];
         System.Type type = preFab.GetType();

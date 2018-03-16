@@ -18,7 +18,9 @@ public class DataManager : MonoBehaviour
 
     // alle variabelen voor de timer
 
-    public Item item;
+    public Item circle;
+    public Item triangle;
+    public Item rectangle;
     public string timerText;
     float timeLeft = 900.0f;
     public bool stop = true;
@@ -33,18 +35,19 @@ public class DataManager : MonoBehaviour
 
         score = 0;
 
+        //qrCodes.add(4,WasteType.Triangle);  dus nummer 4= code van de qr code en wastetype geeft aan welk type het is
         qrCodes.Add(1, WasteType.Circle);
         qrCodes.Add(2, WasteType.Circle);
         qrCodes.Add(3, WasteType.Circle);
-        //qrCodes.Add(4, WasteType.Rectangle);
-        //qrCodes.Add(5, WasteType.Rectangle);
-        //qrCodes.Add(6, WasteType.Rectangle);
-        //qrCodes.Add(7, WasteType.Triangle);
-        //qrCodes.Add(8, WasteType.Triangle);
-        //qrCodes.Add(9, WasteType.Triangle);
+        qrCodes.Add(4, WasteType.Rectangle);
+        qrCodes.Add(5, WasteType.Rectangle);
+        qrCodes.Add(6, WasteType.Rectangle);
+        qrCodes.Add(7, WasteType.Triangle);
+        qrCodes.Add(8, WasteType.Triangle);
+        qrCodes.Add(9, WasteType.Triangle);
 
 
-        //qrCodes.add(4,WasteType.Triangle);  dus nummer 4= code van de qr code en wastetype geeft aan welk type het is
+
 
 
 
@@ -83,9 +86,11 @@ public class DataManager : MonoBehaviour
     { //als QR code in de lijst zit, dan true
         if (qrCodes.ContainsKey(code))   //vraag object op die verbonden zit aan de key die code
         {
+           
+
+            AddToInventory(qrCodes[code]);
             qrCodes.Remove(code);
 
-            //add to inventory
             return true;
         }
         else
@@ -109,14 +114,30 @@ public class DataManager : MonoBehaviour
 
     }
 
-    public void AddToInventory()
+    public void AddToInventory(WasteType wasteType)
     {
         Debug.Log("Adding item to inventory");
-        bool isScanned = InventoryScript2.instance.Add(item);
+//        InventoryScript2.instance.Add(item);
 
-        if (isScanned)
+        if (wasteType == WasteType.Circle)
         {
-            //verwijder hier de QR code uit het systeem?
+            InventoryScript2.instance.Add(circle);
+        }
+
+
+        else if (wasteType == WasteType.Rectangle)
+        {
+            InventoryScript2.instance.Add(rectangle);
+        }
+
+
+        else if (wasteType == WasteType.Triangle)
+        {
+            InventoryScript2.instance.Add(triangle);
+        }
+        else
+        {
+            Debug.Log("Cannot find wasteType");
         }
     }
 }
