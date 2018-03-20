@@ -27,7 +27,7 @@ public class QRReader : UIElement
         {
             webcamTexture.Play();
         }
-        Instantiate(UIManager.Instance.menu, gameObject.transform, false);
+        Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
     }
 
     private void Update()

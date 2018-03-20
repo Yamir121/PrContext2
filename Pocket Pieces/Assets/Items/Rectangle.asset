@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Rectangle
   m_EditorClassIdentifier: 
   name: Square
-  icon: {fileID: 21300000, guid: f250ed17f9fb2e443823f5bfb1a27d44, type: 3}
+  icon: {fileID: 21300000, guid: 06afc0f285f0b2c4d92944d545aea792, type: 3}
   isDefaultItem: 0
   itemObject: {fileID: 1133873614499910, guid: db7607f4312cf5d4c922dc8ff055c1f7, type: 2}

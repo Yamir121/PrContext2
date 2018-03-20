@@ -12,7 +12,7 @@ public class Mainscreen : UIElement
     {
         //GameManager.dataManager.startTimer(900.0f);
         timerText.GetComponent<Text>();
-        Instantiate(UIManager.Instance.menu, gameObject.transform, false);
+        Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
 
     }
 

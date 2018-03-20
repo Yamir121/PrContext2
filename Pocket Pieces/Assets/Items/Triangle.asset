@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: Triangle
   m_EditorClassIdentifier: 
   name: Triangle
-  icon: {fileID: 21300000, guid: 23c2adda6b72e3b4098205c004a7ae70, type: 3}
+  icon: {fileID: 21300000, guid: 8d12ad53425119b4fa07cc62a47c12b6, type: 3}
   isDefaultItem: 0
   itemObject: {fileID: 1133873614499910, guid: db7607f4312cf5d4c922dc8ff055c1f7, type: 2}
