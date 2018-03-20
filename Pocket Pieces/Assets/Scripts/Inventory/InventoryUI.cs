@@ -4,19 +4,17 @@ public class InventoryUI : MonoBehaviour
 {
 
     public Transform waste;
-    public Transform things;
     InventoryScript2 inventory;
 
-    InventorySlot[] wasteSlots;
-    InventorySlot[] thingsSlots;
 
+    InventorySlot[] inventorySlots;
     void Start()
     {
         inventory = InventoryScript2.instance;
         inventory.onItemChangedCallback += UpdateUI;
 
-        wasteSlots = waste.GetComponentsInChildren<InventorySlot>();
-        thingsSlots = things.GetComponentsInChildren<InventorySlot>();
+        inventorySlots = waste.GetComponentsInChildren<InventorySlot>();
+
     }
 
     // Update is called once per frame
@@ -29,30 +27,20 @@ public class InventoryUI : MonoBehaviour
     {
         // Debug.Log("UPDATING UI");
 
-        for (int i = 0; i < wasteSlots.Length; i++)
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
-            if (i < inventory.wasteList.Count)
+            if (i < inventory.inventoryList.Count)
             {
-                wasteSlots[i].AddItem(inventory.wasteList[i]);
+                inventorySlots[i].AddItem(inventory.inventoryList[i]);
             }
             else
             {
-                wasteSlots[i].ClearSlot();
+                inventorySlots[i].ClearSlot();
             }
 
         }
 
-        for (int i = 0; i < thingsSlots.Length; i++)
-        {
-            if (i < inventory.wasteList.Count)
-            {
-                thingsSlots[i].AddItem(inventory.wasteList[i]);
-            }
-            else
-            {
-                thingsSlots[i].ClearSlot();
-            }
-        }
+  
     }
 
 }

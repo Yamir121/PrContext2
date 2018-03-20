@@ -103,7 +103,8 @@ public class DataManager : MonoBehaviour
     {
         while (!stop)
         {
-            timerText = "Time left: " + string.Format("{0:0}:{1:00}", minutes, seconds);
+            timerText = string.Format("{0:0}:{1:00}", minutes, seconds);
+            //timerText = "Time left: " + string.Format("{0:0}:{1:00}", minutes, seconds);
             yield return new WaitForSeconds(0.2f);
         }
     }
