@@ -9,4 +9,11 @@ public class Crafting : UIElement
     {
         Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
     }
+
+    public override void Destroy()
+    {
+        Destroy()
+        this.Destroy();
+    }
+
 }

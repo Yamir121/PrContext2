@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: 963a2adb582c47e408d5d2f19a120c5c
+timeCreated: 1521819255
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Auto 1 Lt SmCp
+  fontNames:
+  - Auto 1 Lt SmCp
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6ad49f28bb072e048949027126275ddb, type: 3}
+  - {fileID: 12800000, guid: 7d74f5cc44679b04f82146d5963d0ff2, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

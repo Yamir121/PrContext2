@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour
             activeElement = Instantiate(preFab, gameObject.transform, false);
             activeElement.Setup();
         }
+
     }
 
     public void CreatePopUp(int index, string message)

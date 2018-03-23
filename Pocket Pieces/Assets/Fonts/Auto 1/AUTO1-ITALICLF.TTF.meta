@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: 7dcb83bb1ec064f40a64a44721bd5902
+timeCreated: 1521819255
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Auto 1 LF
+  fontNames:
+  - Auto 1 LF
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5d956cba80597de4eaac9eb6a4018480, type: 3}
+  - {fileID: 12800000, guid: 22a21f7dcd3088d4785afa7907cb973e, type: 3}
+  - {fileID: 12800000, guid: 0a6a81edfc0a27f4fa597f950302597f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
