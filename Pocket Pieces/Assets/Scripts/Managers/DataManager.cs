@@ -8,19 +8,12 @@ public class DataManager : MonoBehaviour
 
     public int score;
 
-
     Text scoreText;
 
+    public List<Waste> allWasteTypes = new List<Waste>();
 
-    public enum WasteType { Circle, Triangle, Rectangle }; //door ,cylinder te schrijven bijvoorbeeld, voeg je nog een type toe
+    private Dictionary<int, Waste> qrCodes = new Dictionary<int, Waste>();
 
-    private Dictionary<int, WasteType> qrCodes = new Dictionary<int, WasteType>(); //data base voor QR codes
-
-    // alle variabelen voor de timer
-
-    public Item circle;
-    public Item triangle;
-    public Item rectangle;
     public string timerText;
     float timeLeft = 900.0f;
     public bool stop = true;
@@ -35,21 +28,12 @@ public class DataManager : MonoBehaviour
 
         score = 0;
 
-        //qrCodes.add(4,WasteType.Triangle);  dus nummer 4= code van de qr code en wastetype geeft aan welk type het is
-        qrCodes.Add(1, WasteType.Circle);
-        qrCodes.Add(2, WasteType.Circle);
-        qrCodes.Add(3, WasteType.Circle);
-        qrCodes.Add(4, WasteType.Rectangle);
-        qrCodes.Add(5, WasteType.Rectangle);
-        qrCodes.Add(6, WasteType.Rectangle);
-        qrCodes.Add(7, WasteType.Triangle);
-        qrCodes.Add(8, WasteType.Triangle);
-        qrCodes.Add(9, WasteType.Triangle);
-
-
-
-
-
+        for (int i = 0; i < allWasteTypes.Count;i++)
+        {
+            Debug.Log(allWasteTypes[i]);
+            Waste w = allWasteTypes[i];
+            qrCodes.Add((i+1),w);
+        }
 
     }
 
@@ -63,7 +47,11 @@ public class DataManager : MonoBehaviour
 
     private void Update()
     {
-
+            //debug
+            if (Input.GetMouseButtonDown(1))
+            {
+                GameManager.Instance.inventoryManager.Add(allWasteTypes[0]);
+            }
 
 
         if (stop) return;
@@ -84,13 +72,9 @@ public class DataManager : MonoBehaviour
 
     public bool HandleQR(int code)
     { //als QR code in de lijst zit, dan true
-        if (qrCodes.ContainsKey(code))   //vraag object op die verbonden zit aan de key die code
+        if (qrCodes.ContainsKey(code))
         {
-           
-
             AddToInventory(qrCodes[code]);
-            qrCodes.Remove(code);
-
             return true;
         }
         else
@@ -115,30 +99,10 @@ public class DataManager : MonoBehaviour
 
     }
 
-    public void AddToInventory(WasteType wasteType)
+    public void AddToInventory(Waste waste)
     {
         Debug.Log("Adding item to inventory");
-//        InventoryScript2.instance.Add(item);
+        GameManager.Instance.inventoryManager.Add(waste);
 
-        if (wasteType == WasteType.Circle)
-        {
-            InventoryScript2.instance.Add(circle);
-        }
-
-
-        else if (wasteType == WasteType.Rectangle)
-        {
-            InventoryScript2.instance.Add(rectangle);
-        }
-
-
-        else if (wasteType == WasteType.Triangle)
-        {
-            InventoryScript2.instance.Add(triangle);
-        }
-        else
-        {
-            Debug.Log("Cannot find wasteType");
-        }
     }
 }

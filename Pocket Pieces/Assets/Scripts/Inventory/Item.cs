@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 
+// The base item class. All items should derive from this.
 
-
-//voorbeeldscript overgenomen uit Unity tutorial (adventure game unity tutorial)
-// Nut van script nog onduidelijk.
-
-[CreateAssetMenu(fileName = "New Item", menuName ="Inventory/Item")]
 public class Item : ScriptableObject
 {
-    new public string name = "New Item";
-    public Sprite icon = null;
-    public bool isDefaultItem = false;
-    public GameObject itemObject;
-    
+    new public string name = "New Item";    // Name of the item
+    public Sprite icon;              // Item icon
+
+    // Called when the item is pressed in the inventory
+    public virtual void Select()
+    {
+        // Item Selected
+
+        Debug.Log("Selected " + name);
+    }
+
 }

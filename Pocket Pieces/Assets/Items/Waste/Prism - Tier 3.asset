@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2dfb1c476f44b048911c1eed385d0b3, type: 3}
+  m_Name: Prism - Tier 3
+  m_EditorClassIdentifier: 
+  name: Good-as-new Waste
+  icon: {fileID: 21300000, guid: acbdd3d61a605e54f8a2c2de5e5cffd4, type: 3}
+  condition: 3

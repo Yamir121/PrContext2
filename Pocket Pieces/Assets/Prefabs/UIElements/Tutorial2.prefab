@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222783480412424076}
   - component: {fileID: 114019607334892746}
   - component: {fileID: 114738580205878420}
-  - component: {fileID: 114612977546687908}
+  - component: {fileID: 114830377024078454}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -211,18 +211,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Continue
---- !u!114 &114612977546687908
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1007476829538804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5edef1e8571114c4c856115a40567f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: 3
 --- !u!114 &114719238455791118
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -289,7 +277,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114612977546687908}
+      - m_Target: {fileID: 114830377024078454}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -337,6 +325,18 @@ MonoBehaviour:
   m_Text: 'Tutorial part 2
 
 '
+--- !u!114 &114830377024078454
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007476829538804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5c7321a29b5b3438e6008c7c403f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: 3
 --- !u!114 &114984726123190332
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,12 +8,16 @@ public class UIManager : MonoBehaviour
 {
     public UIElement[] UIElements = { };
     public PopUp[] PopUps = { };
+    [HideInInspector]
     public GameObject menu;
+    [HideInInspector]
     public GameObject activeMenu;
 
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
+    [SerializeField]
     private UIElement activeElement;
+    [SerializeField]
     private PopUp activePopUp;
     
 

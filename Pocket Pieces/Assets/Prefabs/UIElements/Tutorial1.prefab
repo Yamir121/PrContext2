@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222601338969653198}
   - component: {fileID: 114701450465757040}
   - component: {fileID: 114756221798956060}
-  - component: {fileID: 114290433948205546}
+  - component: {fileID: 114939306382634948}
   m_Layer: 5
   m_Name: ContinueButton
   m_TagString: Untagged
@@ -114,18 +114,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114290433948205546
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1055319583210612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5edef1e8571114c4c856115a40567f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: 2
 --- !u!114 &114620636817428518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -288,7 +276,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114290433948205546}
+      - m_Target: {fileID: 114939306382634948}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -345,6 +333,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25842d28dd4ddbe4cb66763b35e8357c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114939306382634948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055319583210612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5c7321a29b5b3438e6008c7c403f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: 2
 --- !u!222 &222154476292075622
 CanvasRenderer:
   m_ObjectHideFlags: 1

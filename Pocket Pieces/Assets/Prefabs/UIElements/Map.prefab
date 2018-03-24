@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 222614613514319884}
   - component: {fileID: 114640825897126896}
   - component: {fileID: 114240669980107972}
-  - component: {fileID: 114049855612890282}
+  - component: {fileID: 114377289513296088}
   m_Layer: 5
   m_Name: cameraButton
   m_TagString: Untagged
@@ -114,18 +114,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114049855612890282
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1117391119595198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5edef1e8571114c4c856115a40567f7a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  screen: 4
 --- !u!114 &114240669980107972
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,7 +153,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114049855612890282}
+      - m_Target: {fileID: 114377289513296088}
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -205,6 +193,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114377289513296088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1117391119595198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de5c7321a29b5b3438e6008c7c403f31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screen: 4
 --- !u!114 &114614181322206406
 MonoBehaviour:
   m_ObjectHideFlags: 1
