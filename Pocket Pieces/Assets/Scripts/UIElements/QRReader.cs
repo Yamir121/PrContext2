@@ -27,7 +27,9 @@ public class QRReader : UIElement
         {
             webcamTexture.Play();
         }
-        Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
+
+        UIManager.Instance.activeMenu = Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
+
     }
 
     private void Update()
@@ -88,6 +90,7 @@ public class QRReader : UIElement
 
     public override void Destroy()
     {
+        Destroy(UIManager.Instance.activeMenu);
         webcamTexture.Stop(); //zet cam uit. wordt automatisch door ui manager geroepen
         Destroy(this.gameObject);
     }

@@ -9,12 +9,13 @@ public class UIManager : MonoBehaviour
     public UIElement[] UIElements = { };
     public PopUp[] PopUps = { };
     public GameObject menu;
+    public GameObject activeMenu;
 
     public static UIManager Instance { get { return _instance; } }
     private static UIManager _instance;
     private UIElement activeElement;
     private PopUp activePopUp;
-
+    
 
     private void Awake()
     {

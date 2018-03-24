@@ -12,8 +12,15 @@ public class Mainscreen : UIElement
     {
         //GameManager.dataManager.startTimer(900.0f);
         timerText.GetComponent<Text>();
-        Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
 
+        UIManager.Instance.activeMenu = Instantiate(UIManager.Instance.menu, UIManager.Instance.transform, false);
+
+    }
+
+    public override void Destroy()
+    {
+        Destroy(UIManager.Instance.activeMenu);
+        Destroy(gameObject);
     }
 
     private void Update()
