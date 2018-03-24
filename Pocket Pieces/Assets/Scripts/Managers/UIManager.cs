@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
     {
         UIElement preFab = UIElements[index];
         System.Type type = preFab.GetType();
+        if (activePopUp != null) { activePopUp.Destroy(); }
         if (activeElement == null || activeElement.GetType() != type)
         {
             if (activeElement != null) { activeElement.Destroy(); }

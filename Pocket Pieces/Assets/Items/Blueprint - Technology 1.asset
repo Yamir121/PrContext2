@@ -16,5 +16,5 @@ MonoBehaviour:
   ingredient1: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
   ingredient2: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
   ingredient3: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
-  function: 'Enables you to play games or watch movies at any time. '
+  function: 'enables you to play games or watch movies at any time. '
   result: {fileID: 11400000, guid: c4e8b0140e56f3748a53f810121eb862, type: 2}
