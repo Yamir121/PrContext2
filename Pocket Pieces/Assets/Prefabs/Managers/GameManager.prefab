@@ -59,6 +59,7 @@ MonoBehaviour:
   thingsList: []
   blueprintList:
   - {fileID: 11400000, guid: 4e45d6a73e1ce494981af2fb53d42fc0, type: 2}
+  - {fileID: 11400000, guid: 00f7d8727a68d5b4eac7b743c413caf5, type: 2}
 --- !u!114 &114532292638330284
 MonoBehaviour:
   m_ObjectHideFlags: 1
