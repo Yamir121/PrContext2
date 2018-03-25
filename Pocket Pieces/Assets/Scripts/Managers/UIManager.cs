@@ -69,4 +69,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void CreatePopUp(int index, string message,Thing result)
+    {
+        CreatePopUp(index,message);
+        
+    }
+
+
 }

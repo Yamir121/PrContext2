@@ -15,7 +15,7 @@ public class BluePrint : Item
     // Called when the item is pressed in the inventory
     public override void Select()
     {
-        UIManager.Instance.CreatePopUp(2,("Building this Thing costs 3 " + result.category +  " Wastes. This will create a Thing which " + function));
+        UIManager.Instance.CreatePopUp(2,("Building this Thing costs 3 " + result.category + " Wastes. \n \n This will create a Thing which " + function),result);
         Debug.Log("Blueprint is clicked");
     }
 }

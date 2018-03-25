@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Blueprint - Technology 1
   m_EditorClassIdentifier: 
   name: Technology 1
-  icon: {fileID: 21300000, guid: 3b58524308512304c8d0a60e5637f965, type: 3}
+  icon: {fileID: 21300000, guid: 064b64ceb11fe694dbb0c8ef519f251a, type: 3}
   ingredient1: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
   ingredient2: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
   ingredient3: {fileID: 11400000, guid: 3fd4aac99ad9bec4dac7e0b3432f1c12, type: 2}
