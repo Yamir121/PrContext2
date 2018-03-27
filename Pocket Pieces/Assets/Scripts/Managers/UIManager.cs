@@ -64,11 +64,19 @@ public class UIManager : MonoBehaviour
     }
 
     //overload for blueprints
-    public void CreatePopUp(int index, string message,Thing result)
+    public void CreatePopUp(int index, string message,BluePrint bluePrint)
     {
         CreatePopUp(index,message);
-        var p = activePopUp as UseBlueprint;
-        p.AddThing(result);
+        if (PopUps[index].GetType() == typeof(UseBlueprint))
+        { var p = (UseBlueprint)activePopUp;
+            p.AddBlueprint(bluePrint); }
+        else if (PopUps[index].GetType() == typeof(Succes))
+        { var p = (Succes)activePopUp; p.AddBlueprint(bluePrint); }
+        else
+        {
+            return;
+        }
+        
     }
 
 

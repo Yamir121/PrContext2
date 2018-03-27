@@ -92,7 +92,7 @@ MonoBehaviour:
   - {fileID: 114261616611218948, guid: 057954181eaa70146b1ef3b313458574, type: 2}
   - {fileID: 114296432119846252, guid: e924846c140df424ea88ff34037a11d3, type: 2}
   - {fileID: 114566530282857736, guid: da1df96b435d9c9448519616ec98de13, type: 2}
-  - {fileID: 0}
+  - {fileID: 114707726867088296, guid: 7e686bd9a2600a54d83af2ce6d0c93d6, type: 2}
   - {fileID: 0}
   menu: {fileID: 1057022468571576, guid: e87f4a3e1593b734c9bdaa6719634d41, type: 2}
   activeMenu: {fileID: 0}
