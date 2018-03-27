@@ -10,9 +10,5 @@ public class Item : ScriptableObject
     // Called when the item is pressed in the inventory
     public virtual void Select()
     {
-        // Item Selected
-
-        Debug.Log("Selected " + name);
     }
-
 }

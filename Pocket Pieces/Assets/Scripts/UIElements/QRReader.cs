@@ -60,7 +60,7 @@ public class QRReader : UIElement
                 {
 
                     Handheld.Vibrate();
-                    GameManager.dataManager.addToScore(qrScoreValue);
+                    //GameManager.dataManager.addToScore(qrScoreValue);
                     Debug.Log(" score added");
 
                     Debug.Log("added to inventory");

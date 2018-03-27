@@ -20,7 +20,6 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private PopUp activePopUp;
     
-
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -31,22 +30,17 @@ public class UIManager : MonoBehaviour
         {
             _instance = this;
         }
-
-
-
     }
-
-    private void Start()
-    {
-        
-    }
-
 
     public void CreateScreen(int index)
     {
         UIElement preFab = UIElements[index];
         System.Type type = preFab.GetType();
+
         if (activePopUp != null) { activePopUp.Destroy(); }
+
+        GameManager.dataManager.EmptySelectedWaste();
+
         if (activeElement == null || activeElement.GetType() != type)
         {
             if (activeElement != null) { activeElement.Destroy(); }
@@ -69,6 +63,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    //overload for blueprints
     public void CreatePopUp(int index, string message,Thing result)
     {
         CreatePopUp(index,message);

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    //public delegate void OnItemChanged();
-    //public OnItemChanged onItemChangedCallback; //wordt getriggerd als er iets in de inventory veranderd
 
     public int maxWaste = 9;
     public int maxThings = 3;
@@ -19,11 +17,18 @@ public class InventoryManager : MonoBehaviour
     
     public List<Item> blueprintList = new List<Item>();
 
+    private void Start()
+    {
+        wasteList.Add(GameManager.dataManager.allWasteTypes[0]);
+        wasteList.Add(GameManager.dataManager.allWasteTypes[1]);
+        wasteList.Add(GameManager.dataManager.allWasteTypes[2]);
+
+    }
 
     public bool Add(Waste waste)
     {
 
-        if (wasteList.Count >= maxWaste)
+        if (wasteList.Count != 0 && wasteList.Count >= maxWaste)
         {
             Debug.Log("Not enough room in inventory");
             return false;
@@ -32,19 +37,12 @@ public class InventoryManager : MonoBehaviour
         {
             wasteList.Add(waste);
         }
-
-        //if (onItemChangedCallback != null)
-        //    onItemChangedCallback.Invoke();
-
         return true;
     }
 
     public void Remove(Waste waste)
     {
         wasteList.Remove(waste);
-        //if (onItemChangedCallback != null)
-        //    onItemChangedCallback.Invoke();
     }
-
 
 }

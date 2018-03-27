@@ -18,11 +18,10 @@ public class InventoryUI : MonoBehaviour
     private InventoryManager inventoryManager;
     private InventorySlot[] inventorySlots;
 
-    void Start()
+    private void Start()
     {
         t = gameObject.GetComponent<Transform>();
         inventoryManager = GameManager.Instance.GetComponent<InventoryManager>();
-        //inventoryManager.onItemChangedCallback += UpdateUI;
         if (type == InventoryType.Waste)
         {
             list = inventoryManager.wasteList;
@@ -38,10 +37,9 @@ public class InventoryUI : MonoBehaviour
 
         inventorySlots = t.GetComponentsInChildren<InventorySlot>();
         UpdateUI();
-
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         Debug.Log("UPDATING UI");
 
@@ -61,4 +59,15 @@ public class InventoryUI : MonoBehaviour
   
     }
 
+    public void UpdateSelected()
+    {
+        Debug.Log("UPDATING Selected");
+
+        for (int i = 0; i < inventorySlots.Length; i++)
+        {
+            inventorySlots[i].Selected();
+        }
+
+
+    }
 }

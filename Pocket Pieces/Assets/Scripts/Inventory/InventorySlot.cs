@@ -8,15 +8,20 @@ public class InventorySlot : MonoBehaviour {
 
     public Image icon;
     public Button button;
+    public Image selectedImage;
     Item item;
 
     public void Awake()
     {
         button = GetComponentInChildren<Button>();
-        Debug.Log(button);
+        if(selectedImage!=null)
+        {
+            selectedImage.GetComponent<Transform>().SetAsLastSibling();
+            selectedImage.enabled = false;
+        }
     }
 
-    public void AddItem (Item newItem)
+    public void AddItem(Item newItem)
     {
         button.onClick.AddListener(newItem.Select);
         item = newItem;
@@ -24,7 +29,28 @@ public class InventorySlot : MonoBehaviour {
         icon.enabled = true;
     }
 
-    public void ClearSlot ()
+    public void Selected()
+    {
+        if (item == null)
+        {
+            return;
+        }
+        Waste[] selected = GameManager.dataManager.selectedWaste;
+        for (int i = 0; i < selected.Length; i++)
+        {
+            if (selected[i] == (item))
+            {
+                selectedImage.enabled = true;
+                return;
+            }
+            else
+            {
+                selectedImage.enabled = false;
+            }          
+        }
+    }
+
+    public void ClearSlot()
     {
         item = null;
         icon.sprite = null;

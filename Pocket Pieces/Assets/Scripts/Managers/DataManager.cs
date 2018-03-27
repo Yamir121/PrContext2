@@ -5,24 +5,22 @@ using UnityEngine.UI;
 
 public class DataManager : MonoBehaviour
 {
-
     public int score;
-
     Text scoreText;
 
     public List<Waste> allWasteTypes = new List<Waste>();
+    public Waste[] selectedWaste = new Waste[3];
 
     private Dictionary<int, Waste> qrCodes = new Dictionary<int, Waste>();
-
     public string timerText;
     float timeLeft = 900.0f;
     public bool stop = true;
     private float minutes;
     private float seconds;
 
-
     private void Start()
     {
+
         startTimer(timeLeft);
         scoreText = GetComponent<Text>();
 
@@ -47,13 +45,6 @@ public class DataManager : MonoBehaviour
 
     private void Update()
     {
-            //debug
-            if (Input.GetMouseButtonDown(1))
-            {
-                GameManager.Instance.inventoryManager.Add(allWasteTypes[0]);
-            }
-
-
         if (stop) return;
         timeLeft -= Time.deltaTime;
 
@@ -66,8 +57,6 @@ public class DataManager : MonoBehaviour
             minutes = 0;
             seconds = 0;
         }
-
-
     }
 
     public bool HandleQR(int code)
@@ -93,11 +82,13 @@ public class DataManager : MonoBehaviour
         }
     }
 
+    /* SCORE STUFF
     public void addToScore(int number)
     {
         score += number;
 
     }
+    */
 
     public void AddToInventory(Waste waste)
     {
@@ -105,4 +96,42 @@ public class DataManager : MonoBehaviour
         GameManager.Instance.inventoryManager.Add(waste);
 
     }
+
+    public bool EmptySelectedWaste()
+    {
+        for (int i = 0; i < selectedWaste.Length;  i++)
+        {
+            selectedWaste[i] = null;
+            return true;
+        }
+        return false;
+    }
+
+
+    public bool SelectWaste(Waste waste)
+    {
+        for (int i = 0; i < selectedWaste.Length; i++)
+        {
+            if (selectedWaste[i] == null)
+            {
+                selectedWaste[i] = waste;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public bool DeselectWaste(Waste waste)
+    {
+        for (int i = 0; i < selectedWaste.Length; i++)
+        {
+            if (selectedWaste[i] == waste)
+            {
+                selectedWaste[i] = null;
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
